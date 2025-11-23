@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.dns.LinkCacheTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:57:36" hostname="MBP-de-Rafael" time="0.0">
+  <properties/>
+  <testcase name="testLinkCache" classname="org.tron.p2p.dns.LinkCacheTest" time="0.0"/>
+  <system-out><![CDATA[1：3
+2：1
+3：2
+4：2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

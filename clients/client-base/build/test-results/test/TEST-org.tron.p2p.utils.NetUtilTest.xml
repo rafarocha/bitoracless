@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.utils.NetUtilTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:58:30" hostname="MBP-de-Rafael" time="2.791">
+  <properties/>
+  <testcase name="testGetLanIP" classname="org.tron.p2p.utils.NetUtilTest" time="0.71"/>
+  <testcase name="testGetIP" classname="org.tron.p2p.utils.NetUtilTest" time="1.742"/>
+  <testcase name="testParseIpv6" classname="org.tron.p2p.utils.NetUtilTest" time="0.002"/>
+  <testcase name="testGetNode" classname="org.tron.p2p.utils.NetUtilTest" time="0.001"/>
+  <testcase name="testIPv6Format" classname="org.tron.p2p.utils.NetUtilTest" time="0.0"/>
+  <testcase name="testValidNode" classname="org.tron.p2p.utils.NetUtilTest" time="0.0"/>
+  <testcase name="testValidIp" classname="org.tron.p2p.utils.NetUtilTest" time="0.001"/>
+  <testcase name="testExternalIp" classname="org.tron.p2p.utils.NetUtilTest" time="0.333"/>
+  <system-out><![CDATA[17:58:33.081 [connPool] DEBUG net - Lack size:8, connectNodes size:0, is disconnect trigger: false
+17:58:33.232 [Test worker] DEBUG net - GetExternalIpV4 cost 170 ms
+17:58:33.569 [Test worker] DEBUG net - GetExternalIpV4 cost 331 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

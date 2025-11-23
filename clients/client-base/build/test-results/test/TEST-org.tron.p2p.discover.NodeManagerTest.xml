@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.discover.NodeManagerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:57:31" hostname="MBP-de-Rafael" time="0.274">
+  <properties/>
+  <testcase name="testNoSeeds" classname="org.tron.p2p.discover.NodeManagerTest" time="0.274"/>
+  <system-out><![CDATA[17:57:32.128 [Test worker] DEBUG net - GetExternalIpV4 cost 152 ms
+17:57:32.133 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:32.133 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:32.134 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:32.134 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:32.136 [Test worker] DEBUG net - GetExternalIpV6 cost 4 ms
+17:57:32.138 [Test worker] DEBUG net - DiscoverTask started
+17:57:32.156 [DiscoverServer] INFO net - Discovery server started, bind port 18888
+17:57:32.249 [Test worker] INFO net - Closing discovery server...
+17:57:32.249 [DiscoverServer] INFO net - Shutdown discovery server
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

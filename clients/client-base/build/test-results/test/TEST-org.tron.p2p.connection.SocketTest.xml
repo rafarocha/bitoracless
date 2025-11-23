@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.connection.SocketTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:57:31" hostname="MBP-de-Rafael" time="0.39">
+  <properties/>
+  <testcase name="testPeerServerAndPeerClient" classname="org.tron.p2p.connection.SocketTest" time="0.39"/>
+  <system-out><![CDATA[17:57:31.584 [Test worker] DEBUG net - GetExternalIpV4 cost 380 ms
+17:57:31.588 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:31.588 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:31.588 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:31.589 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:31.591 [Test worker] DEBUG net - GetExternalIpV6 cost 5 ms
+17:57:31.594 [PeerServer] INFO net - TCP listener started, bind port 10001
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

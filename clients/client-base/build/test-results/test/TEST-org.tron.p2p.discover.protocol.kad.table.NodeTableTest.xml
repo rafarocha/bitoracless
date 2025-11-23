@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:57:35" hostname="MBP-de-Rafael" time="0.413">
+  <properties/>
+  <testcase name="containsTest" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.0"/>
+  <testcase name="getClosestNodes_isDiscoverNode" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.0"/>
+  <testcase name="addNode_bucketFullTest" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.191"/>
+  <testcase name="getBuckIdTest" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.0"/>
+  <testcase name="test" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.0"/>
+  <testcase name="addNodeTest" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.0"/>
+  <testcase name="addDupNodeTest" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.023"/>
+  <testcase name="getBucketsCountTest" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.001"/>
+  <testcase name="dropNodeTest" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.0"/>
+  <testcase name="getClosestNodes_nodesMoreThanBucketCapacity" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.184"/>
+  <testcase name="touchNodeTest" classname="org.tron.p2p.discover.protocol.kad.table.NodeTableTest" time="0.013"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

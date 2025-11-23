@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.discover.protocol.kad.KadServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:57:33" hostname="MBP-de-Rafael" time="0.019">
+  <properties/>
+  <testcase name="test" classname="org.tron.p2p.discover.protocol.kad.KadServiceTest" time="0.019"/>
+  <system-out><![CDATA[17:57:33.349 [Test worker] DEBUG net - GetExternalIpV4 cost 159 ms
+17:57:33.354 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:33.355 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:33.355 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:33.357 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:33.359 [Test worker] DEBUG net - GetExternalIpV6 cost 7 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

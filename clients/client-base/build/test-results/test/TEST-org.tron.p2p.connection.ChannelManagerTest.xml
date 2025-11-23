@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.connection.ChannelManagerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:57:24" hostname="MBP-de-Rafael" time="1.06">
+  <properties/>
+  <testcase name="testNotifyDisconnect" classname="org.tron.p2p.connection.ChannelManagerTest" time="0.045"/>
+  <testcase name="testProcessPeer" classname="org.tron.p2p.connection.ChannelManagerTest" time="1.014"/>
+  <testcase name="testGetConnectionNum" classname="org.tron.p2p.connection.ChannelManagerTest" time="0.0"/>
+  <system-out><![CDATA[17:57:25.643 [Test worker] DEBUG net - GetExternalIpV4 cost 722 ms
+17:57:25.657 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:25.658 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:25.706 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:25.910 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:25.912 [Test worker] DEBUG net - GetExternalIpV6 cost 259 ms
+17:57:25.913 [Test worker] INFO net - Add peer /100.1.1.2:100, total channels: 1
+17:57:25.920 [Test worker] INFO net - Too many peers, disconnected with /100.1.1.2:99 | <null>
+17:57:25.921 [Test worker] INFO net - Max connection with same ip /100.1.1.2:99 | <null>
+17:57:25.921 [Test worker] INFO net - Duplicate peer /100.1.1.2:99 | cc, exist peer /100.1.1.2:100 | cc
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

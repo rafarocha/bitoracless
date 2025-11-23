@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.connection.message.handshake.HelloMessageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:57:31" hostname="MBP-de-Rafael" time="0.378">
+  <properties/>
+  <testcase name="testHelloMessage" classname="org.tron.p2p.connection.message.handshake.HelloMessageTest" time="0.378"/>
+  <system-out><![CDATA[17:57:31.596 [peerBoss] DEBUG io.netty.handler.logging.LoggingHandler - [id: 0xbbfb5bf8] REGISTERED
+17:57:31.597 [peerBoss] DEBUG io.netty.handler.logging.LoggingHandler - [id: 0xbbfb5bf8] BIND: 0.0.0.0/0.0.0.0:10001
+17:57:31.597 [peerBoss] DEBUG io.netty.handler.logging.LoggingHandler - [id: 0xbbfb5bf8, L:/[0:0:0:0:0:0:0:0]:10001] ACTIVE
+17:57:31.800 [connPool] DEBUG net - Lack size:8, connectNodes size:0, is disconnect trigger: false
+17:57:31.968 [Test worker] DEBUG net - GetExternalIpV4 cost 372 ms
+17:57:31.972 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:31.972 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:31.972 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:31.972 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:31.974 [Test worker] DEBUG net - GetExternalIpV6 cost 4 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

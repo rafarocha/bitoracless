@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.utils.ProtoUtilTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:58:33" hostname="MBP-de-Rafael" time="1.186">
+  <properties/>
+  <testcase name="testCompressMessage" classname="org.tron.p2p.utils.ProtoUtilTest" time="1.186"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

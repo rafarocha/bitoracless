@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.dns.TreeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:58:30" hostname="MBP-de-Rafael" time="0.059">
+  <properties/>
+  <testcase name="testGroupAndMerge" classname="org.tron.p2p.dns.TreeTest" time="0.057"/>
+  <testcase name="testMerge" classname="org.tron.p2p.dns.TreeTest" time="0.0"/>
+  <testcase name="testTreeBuild" classname="org.tron.p2p.dns.TreeTest" time="0.002"/>
+  <system-out><![CDATA[srcSize:505
+addSize:224
+deleteSize:224
+intersectionSize:281
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

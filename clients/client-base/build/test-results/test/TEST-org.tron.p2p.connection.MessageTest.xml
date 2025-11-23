@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.connection.MessageTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:57:29" hostname="MBP-de-Rafael" time="1.786">
+  <properties/>
+  <testcase name="testInvalidTime" classname="org.tron.p2p.connection.MessageTest" time="0.213"/>
+  <testcase name="testUnKnownType" classname="org.tron.p2p.connection.MessageTest" time="0.37"/>
+  <testcase name="testPing" classname="org.tron.p2p.connection.MessageTest" time="0.406"/>
+  <testcase name="testPong" classname="org.tron.p2p.connection.MessageTest" time="0.488"/>
+  <testcase name="testHandShakeHello" classname="org.tron.p2p.connection.MessageTest" time="0.309"/>
+  <system-out><![CDATA[17:57:29.569 [Test worker] DEBUG net - GetExternalIpV4 cost 157 ms
+17:57:29.572 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:29.572 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:29.573 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:29.574 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:29.576 [Test worker] DEBUG net - GetExternalIpV6 cost 4 ms
+17:57:29.981 [Test worker] DEBUG net - GetExternalIpV4 cost 356 ms
+17:57:29.984 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:29.984 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:29.985 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:29.985 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:29.987 [Test worker] DEBUG net - GetExternalIpV6 cost 4 ms
+17:57:30.394 [Test worker] DEBUG net - GetExternalIpV4 cost 399 ms
+17:57:30.397 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:30.398 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:30.398 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:30.398 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:30.400 [Test worker] DEBUG net - GetExternalIpV6 cost 4 ms
+17:57:30.883 [Test worker] DEBUG net - GetExternalIpV4 cost 482 ms
+17:57:30.886 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:30.886 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:30.886 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:30.886 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:30.888 [Test worker] DEBUG net - GetExternalIpV6 cost 3 ms
+17:57:31.175 [Test worker] DEBUG net - GetExternalIpV4 cost 286 ms
+17:57:31.179 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:31.179 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:31.179 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:31.179 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:31.181 [Test worker] DEBUG net - GetExternalIpV6 cost 3 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

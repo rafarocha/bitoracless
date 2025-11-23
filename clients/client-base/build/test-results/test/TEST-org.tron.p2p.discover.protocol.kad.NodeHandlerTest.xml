@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.discover.protocol.kad.NodeHandlerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:57:33" hostname="MBP-de-Rafael" time="2.007">
+  <properties/>
+  <testcase name="test" classname="org.tron.p2p.discover.protocol.kad.NodeHandlerTest" time="2.006"/>
+  <testcase name="testChangeState" classname="org.tron.p2p.discover.protocol.kad.NodeHandlerTest" time="0.001"/>
+  <system-out><![CDATA[17:57:33.584 [Test worker] DEBUG net - GetExternalIpV4 cost 203 ms
+17:57:33.589 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:33.589 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:33.590 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:33.590 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:33.592 [Test worker] DEBUG net - GetExternalIpV6 cost 4 ms
+17:57:35.407 [connPool] DEBUG net - Lack size:8, connectNodes size:0, is disconnect trigger: false
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

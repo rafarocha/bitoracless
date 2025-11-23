@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.dns.AwsRoute53Test" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:57:36" hostname="MBP-de-Rafael" time="0.484">
+  <properties/>
+  <testcase name="testPublish" classname="org.tron.p2p.dns.AwsRoute53Test" time="0.019"/>
+  <testcase name="testChangeSort" classname="org.tron.p2p.dns.AwsRoute53Test" time="0.465"/>
+  <system-out><![CDATA[17:57:36.403 [Test worker] DEBUG net - GetExternalIpV4 cost 244 ms
+17:57:36.411 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:57:36.412 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:57:36.412 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:57:36.411 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:57:36.413 [Test worker] DEBUG net - GetExternalIpV6 cost 3 ms
+17:57:36.613 [Test worker] INFO net - Create h4fht4b454p6uxfd7jcyq5pwdy.n = nodes:-HW4QAggRauloj2SDLtIHN1XBkvhFZ1vtf1raYQp9TBW2RD5EEawDzbtSmlXUfnaHcvwOizhVYLtr7e6vw7NAf6mTuoCgmlkgnY0iXNlY3AyNTZrMaECjrXI8TLNXU0f8cthpAMxEshUyQlK-AM0PW2wfrnacNI
+17:57:36.620 [Test worker] INFO net - Create c7hrfpf3blgf3yr4dy5kx3smbe.n = tree://AM5FCQLWIZX2QFPNJAP7VUERCCRNGRHWZG3YYHIUV7BVDQ5FDPRT2@morenodes.example.org
+17:57:36.620 [Test worker] INFO net - Create jwxydbpxywg6fx3gmdibfa6cj4.n = tree-branch:2XS2367YHAXJFGLZHVAWLQD4ZY,H4FHT4B454P6UXFD7JCYQ5PWDY,MHTDO6TMUBRIA2XWG5LUDACK24
+17:57:36.620 [Test worker] INFO net - Create mhtdo6tmubria2xwg5ludack24.n = nodes:-HW4QLAYqmrwllBEnzWWs7I5Ev2IAs7x_dZlbYdRdMUx5EyKHDXp7AV5CkuPGUPdvbv1_Ms1CPfhcGCvSElSosZmyoqAgmlkgnY0iXNlY3AyNTZrMaECriawHKWdDRk2xeZkrOXBQ0dfMFLHY4eENZwdufn1S1o
+17:57:36.620 [Test worker] INFO net - Create 2xs2367yhaxjfglzhvawlqd4zy.n = nodes:-HW4QOFzoVLaFJnNhbgMoDXPnOvcdVuj7pDpqRvh6BRDO68aVi5ZcjB3vzQRZH2IcLBGHzo8uUN3snqmgTiE56CH3AMBgmlkgnY0iXNlY3AyNTZrMaECC2_24YYkYHEgdzxlSNKQEnHhuNAbNlMlWJxrJxbAFvA
+17:57:36.620 [Test worker] INFO net - Updating n from [tree-root-v1:CjoKGlVKQU9JQlMyUFlZMjJYUU1WRlNXT1RZSlhVEhpGRFhOM1NONjdOQTVES0E0SjJHT0s3QlZRSRgIEldBTE5aWHEyRkk5Ui1ubjdHQk9HdWJBRFVPakZ2MWp5TjZiUHJtSWNTNks0ZE0wc1dKMUwzT2paWFRGei1KcldDenZZVHJId2RMSTlUczRPZ2Q4TXlJUnM] to ["tree-root-v1:CjoKGkZEWE4zU042N05BNURLQTRKMkdPSzdCVlFJEhpGRFhOM1NONjdOQTVES0E0SjJHT0s3QlZRSRgJElc5aDU4d1cyajUzdlBMeHNBSGN1cDMtV0ZEM2lvZUk4SkJrZkdYSk93dmI0R0lHR01pQVAxRkJVVGc4bHlORERleXJkck9uSDdSbUNUUnJRVGxqUm9UaHM"]
+17:57:36.620 [Test worker] INFO net - Updating root from [treeRoot {
+  eRoot: "UJAOIBS2PYY22XQMVFSWOTYJXU"
+  lRoot: "FDXN3SN67NA5DKA4J2GOK7BVQI"
+  seq: 8
+}
+signature: "ALNZXq2FI9R-nn7GBOGubADUOjFv1jyN6bPrmIcS6K4dM0sWJ1L3OjZXTFz-JrWCzvYTrHwdLI9Ts4Ogd8MyIRs"
+] to [treeRoot {
+  eRoot: "FDXN3SN67NA5DKA4J2GOK7BVQI"
+  lRoot: "FDXN3SN67NA5DKA4J2GOK7BVQI"
+  seq: 9
+}
+signature: "9h58wW2j53vPLxsAHcup3-WFD3ioeI8JBkfGXJOwvb4GIGGMiAP1FBUTg8lyNDDeyrdrOnH7RmCTRrQTljRoThs"
+]
+17:57:36.621 [Test worker] INFO net - Delete 2kfjogvxdqtxxugbh7gs7naaai.n = nodes:-HW4QO1ml1DdXLeZLsUxewnthhUy8eROqkDyoMTyavfks9JlYQIlMFEUoM78PovJDPQrAkrb3LRJ-vtrymDguKCOIAWAgmlkgnY0iXNlY3AyNTZrMaEDffaGfJzgGhUif1JqFruZlYmA31HzathLSWxfbq_QoQ4
+17:57:36.621 [Test worker] INFO net - Delete fdxn3sn67na5dka4j2gok7bvqi.n = tree-branch:
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

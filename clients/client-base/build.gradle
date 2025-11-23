@@ -1,0 +1,230 @@
+group 'io.github.tronprotocol'
+version '2.2.7'
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "io.github.gradle-nexus:publish-plugin:1.1.0"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'com.google.protobuf'
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'application'
+apply plugin: 'maven-publish'
+
+def protobufVersion = "3.25.8"
+def grpcVersion = "1.75.0"
+def protocGenVersion = '1.60.0' // https://github.com/grpc/grpc-java/pull/11371 , 1.64.x is not supported CentOS 7.
+
+mainClassName = 'org.tron.p2p.example.StartApp'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        proto {
+            srcDir 'src/main/protos'
+        }
+        java {
+            srcDir 'src/main/java'
+        }
+    }
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        maven {
+            url "https://cdn.lfrs.sl/repository.liferay.com/nexus/content/groups/public"
+        }
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:5.2.0'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.9.1'
+    }
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+
+    implementation group: 'org.xerial.snappy', name: 'snappy-java', version: '1.1.10.5'
+    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: protobufVersion
+    implementation group: 'com.google.protobuf', name: 'protobuf-java-util', version: protobufVersion
+    implementation group: 'io.grpc', name: 'grpc-netty', version: grpcVersion
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk18on', version: '1.79'
+    implementation group: 'org.bouncycastle', name: 'bcpkix-jdk18on', version: '1.79'
+
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.18.0'
+    implementation group: 'commons-cli', name: 'commons-cli', version: '1.5.0'
+
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.34'
+    testImplementation group: 'org.projectlombok', name: 'lombok', version: '1.18.34'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.34'
+
+    implementation group: 'dnsjava', name: 'dnsjava', version: '3.6.2'
+    implementation('software.amazon.awssdk:route53:2.18.41', {
+        exclude group: 'io.netty', module: 'netty-codec-http2'
+        exclude group: 'io.netty', module: 'netty-codec-http'
+        exclude group: 'io.netty', module: 'netty-common'
+        exclude group: 'io.netty', module: 'netty-buffer'
+        exclude group: 'io.netty', module: 'netty-transport'
+        exclude group: 'io.netty', module: 'netty-codec'
+        exclude group: 'io.netty', module: 'netty-handler'
+        exclude group: 'io.netty', module: 'netty-resolver'
+        exclude group: 'io.netty', module: 'netty-transport-classes-epoll'
+        exclude group: 'io.netty', module: 'netty-transport-native-unix-common'
+    })
+    implementation group: 'com.aliyun', name: 'alidns20150109', version: '3.0.1', {
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
+        exclude group: 'org.bouncycastle', module: 'bcpkix-jdk15on'
+        exclude group: 'pull-parser', module: 'pull-parser'
+        exclude group: 'xpp3', module: 'xpp3'
+    }
+
+    //If logging is required, uncomment this dependency
+    implementation("ch.qos.logback:logback-classic:1.2.13") {
+        exclude group: 'jaxen', module: 'jaxen'
+        exclude group: 'javax.xml.stream', module: 'stax-api'
+        exclude group: 'net.java.dev.msv', module: 'xsdlib'
+        exclude group: 'pull-parser', module: 'pull-parser'
+        exclude group: 'xpp3', module: 'xpp3'
+    }
+}
+
+tasks.matching { it instanceof Test }.all {
+    testLogging.events = ["failed", "passed", "skipped"]
+}
+
+
+protobuf {
+    generatedFilesBaseDir = "$projectDir/src"
+    protoc {
+        artifact = "com.google.protobuf:protoc:$protobufVersion"
+    }
+
+    plugins {
+        grpc {
+            artifact = "io.grpc:protoc-gen-grpc-java:$protocGenVersion"
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                java { outputSubDir = "java" }
+            }
+        }
+        all()*.plugins {
+            grpc {
+                outputSubDir = "java"
+            }
+        }
+    }
+}
+
+shadowJar {
+    baseName = 'libp2p'
+    classifier = null
+    version = null
+    zip64 = true
+}
+
+
+clean.doFirst {
+    delete "src/main/java/org/tron/p2p/protos"
+}
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    [compileJava]*.options*.encoding = 'UTF-8'
+}
+compileTestJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    [compileTestJava]*.options*.encoding = 'UTF-8'
+}
+
+task sourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from sourceSets.main.allJava
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    dependsOn(generateProto) // explicit_dependency
+}
+
+task javadocJar(type: Jar) {
+    archiveClassifier.set('javadoc')
+    from javadoc.destinationDir
+}
+
+javadoc {
+    description = "Generates project-level javadoc for use in -javadoc jar"
+
+    options.memberLevel = org.gradle.external.javadoc.JavadocMemberLevel.PROTECTED
+    options.author = true
+    options.version = true
+    options.header = project.name
+    options.addStringOption('Xdoclint:none', '-quiet')
+
+    // suppress warnings due to cross-module @see and @link references;
+    // note that global 'api' task does display all warnings.
+    logging.captureStandardError LogLevel.INFO
+    logging.captureStandardOutput LogLevel.INFO // suppress "## warnings" message
+    options.encoding = "UTF-8"
+    options.charSet = 'UTF-8'
+}
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+processResources.dependsOn(generateProto) // explicit_dependency
+
+publishing {
+    repositories {
+        // CI
+        maven {
+            name = 'ciLocal'
+            url =  "$buildDir/repo"
+        }
+    }
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            pom {
+                name = 'libp2p'
+                description = 'libp2p is a p2p network SDK implemented in java language.'
+                url = 'https://github.com/tronprotocol/libp2p'
+                licenses {
+                    license {
+                        name = 'The Apache Software License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        name = 'chengtx01'
+                        email = 'ctxhorse@gmail.com'
+                    }
+                }
+                scm {
+                    url = 'https://github.com/tronprotocol/libp2p'
+                    connection = 'scm:git:git://github.com/tronprotocol/libp2p.git'
+                    developerConnection = 'scm:git:ssh://git@github.com:tronprotocol/libp2p.git'
+                }
+            }
+        }
+    }
+}

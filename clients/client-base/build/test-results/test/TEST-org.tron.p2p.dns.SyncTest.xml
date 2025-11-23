@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.tron.p2p.dns.SyncTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-22T20:58:04" hostname="MBP-de-Rafael" time="26.147">
+  <properties/>
+  <testcase name="testSync" classname="org.tron.p2p.dns.SyncTest" time="26.147"/>
+  <system-out><![CDATA[17:58:05.970 [Test worker] DEBUG net - GetExternalIpV4 cost 1407 ms
+17:58:05.978 [getIp-2] WARN net - Fail to get ipv6 by http://6.ipw.cn/, cause:No route to host
+17:58:05.978 [getIp-1] WARN net - Fail to get ipv6 by https://v6.ident.me, cause:No route to host
+17:58:05.979 [getIp-3] WARN net - Fail to get ipv6 by https://api6.ipify.org, cause:No route to host
+17:58:05.979 [getIp-4] WARN net - Fail to get ipv6 by https://ipv6.icanhazip.com, cause:No route to host
+17:58:05.982 [Test worker] DEBUG net - GetExternalIpV6 cost 7 ms
+17:58:05.983 [Test worker] INFO net - UpdateRoot nile.trondisco.net
+17:58:05.983 [Test worker] INFO net - LookUp name: nile.trondisco.net
+17:58:05.984 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:05.984 [Test worker] DEBUG net - Succeed to use dns: 114.114.114.114, cur cost: 0ms, total cost: 0ms
+17:58:05.984 [Test worker] INFO net - Domain:nile.trondisco.net, public key:00990634094857fdaef67dc68e23b9b5919e02cedf07687b7e83821bb4b73ed7095ed3c163d68798b8441021e12ee5dfa5132fc36fd2a6a224390f08a33d1845aa
+17:58:05.990 [Test worker] INFO net - Get dnsRoot:[treeRoot {
+  eRoot: "QCUWHR4UJZ7FEEDYIJEVANCKHY"
+  lRoot: "G763M53MOPYWUVJSW6CGE27GE4"
+  seq: 274
+}
+signature: "zsM2CMI7bfn-XCwrHx9P-PQU8fC1rthR8hGPuXBg-3188nyFpiz2L9AT2BS7hDTAuYszLhd5yfXXS6cj5sYJ6Bw"
+]
+17:58:05.990 [Test worker] INFO net - LookUp name: G763M53MOPYWUVJSW6CGE27GE4.nile.trondisco.net
+17:58:05.991 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for G763M53MOPYWUVJSW6CGE27GE4.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:05.991 [Test worker] DEBUG net - Succeed to use dns: 114.114.114.114, cur cost: 0ms, total cost: 0ms
+17:58:05.991 [Test worker] INFO net - children size is 0, e:[tree-branch:]
+17:58:05.991 [Test worker] INFO net - LookUp name: QCUWHR4UJZ7FEEDYIJEVANCKHY.nile.trondisco.net
+17:58:05.991 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for QCUWHR4UJZ7FEEDYIJEVANCKHY.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:05.991 [Test worker] DEBUG net - Succeed to use dns: 8.8.4.4, cur cost: 0ms, total cost: 0ms
+17:58:05.992 [Test worker] INFO net - LookUp name: EXHN3RN5V6ZR2FDACH73F2Y33Q.nile.trondisco.net
+17:58:05.992 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for EXHN3RN5V6ZR2FDACH73F2Y33Q.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:05.992 [Test worker] DEBUG net - Succeed to use dns: 114.114.114.114, cur cost: 0ms, total cost: 0ms
+17:58:05.992 [Test worker] INFO net - LookUp name: 7CLXVVHOUI2MAGIQ5AQTNAXQ6Y.nile.trondisco.net
+17:58:05.992 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 7CLXVVHOUI2MAGIQ5AQTNAXQ6Y.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:05.992 [Test worker] DEBUG net - Succeed to use dns: 119.29.29.29, cur cost: 0ms, total cost: 0ms
+17:58:05.993 [Test worker] INFO net - LookUp name: D73KUKPT3QVYF234YFGJM5XSGA.nile.trondisco.net
+17:58:05.993 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for D73KUKPT3QVYF234YFGJM5XSGA.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:05.993 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending D73KUKPT3QVYF234YFGJM5XSGA.nile.trondisco.net./TXT, id=24620 to udp/123.125.81.6:53
+17:58:06.997 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for D73KUKPT3QVYF234YFGJM5XSGA.nile.trondisco.net./TXT, id=24620 failed using resolver SimpleResolver [/123.125.81.6:53]
+java.net.SocketTimeoutException: Query timed out
+	at org.xbill.DNS.NioUdpClient.checkTransactionTimeouts(NioUdpClient.java:78)
+	at org.xbill.DNS.NioClient.runTasks(NioClient.java:172)
+	at org.xbill.DNS.NioClient.runSelector(NioClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+17:58:06.998 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for D73KUKPT3QVYF234YFGJM5XSGA.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:06.998 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending D73KUKPT3QVYF234YFGJM5XSGA.nile.trondisco.net./TXT, id=48029 to udp/123.125.81.6:53
+17:58:07.403 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for D73KUKPT3QVYF234YFGJM5XSGA.nile.trondisco.net./TXT
+17:58:07.403 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried D73KUKPT3QVYF234YFGJM5XSGA.nile.trondisco.net./TXT, id=48029: SUCCESSFUL
+17:58:07.404 [Test worker] DEBUG net - Succeed to use dns: 123.125.81.6, cur cost: 1411ms, total cost: 1411ms
+17:58:07.405 [Test worker] INFO net - LookUp name: ISSZR7TBJCNVCNUQP6W5VIVJ4E.nile.trondisco.net
+17:58:07.406 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for ISSZR7TBJCNVCNUQP6W5VIVJ4E.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:07.406 [Test worker] DEBUG net - Succeed to use dns: 119.29.29.29, cur cost: 0ms, total cost: 0ms
+17:58:07.406 [Test worker] INFO net - LookUp name: VD5E6X52WHY55SUSVCXOUDFRYE.nile.trondisco.net
+17:58:07.406 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for VD5E6X52WHY55SUSVCXOUDFRYE.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:07.407 [Test worker] DEBUG net - Succeed to use dns: 223.6.6.6, cur cost: 1ms, total cost: 1ms
+17:58:07.407 [Test worker] INFO net - LookUp name: LCRAB36VBC7EFJH6GX4SD5EAHU.nile.trondisco.net
+17:58:07.407 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for LCRAB36VBC7EFJH6GX4SD5EAHU.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:07.408 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending LCRAB36VBC7EFJH6GX4SD5EAHU.nile.trondisco.net./TXT, id=44378 to udp/223.6.6.6:53
+17:58:07.848 [connPool] DEBUG net - Lack size:8, connectNodes size:0, is disconnect trigger: false
+17:58:07.878 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for LCRAB36VBC7EFJH6GX4SD5EAHU.nile.trondisco.net./TXT
+17:58:07.879 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried LCRAB36VBC7EFJH6GX4SD5EAHU.nile.trondisco.net./TXT, id=44378: SUCCESSFUL
+17:58:07.879 [Test worker] DEBUG net - Succeed to use dns: 223.6.6.6, cur cost: 472ms, total cost: 472ms
+17:58:07.880 [Test worker] INFO net - LookUp name: XB35YQ7ZOL3DIDRCFYZCCXA544.nile.trondisco.net
+17:58:07.880 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for XB35YQ7ZOL3DIDRCFYZCCXA544.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:07.880 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending XB35YQ7ZOL3DIDRCFYZCCXA544.nile.trondisco.net./TXT, id=7000 to udp/8.8.4.4:53
+17:58:08.061 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for XB35YQ7ZOL3DIDRCFYZCCXA544.nile.trondisco.net./TXT
+17:58:08.062 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried XB35YQ7ZOL3DIDRCFYZCCXA544.nile.trondisco.net./TXT, id=7000: SUCCESSFUL
+17:58:08.062 [Test worker] DEBUG net - Succeed to use dns: 8.8.4.4, cur cost: 182ms, total cost: 182ms
+17:58:08.063 [Test worker] INFO net - LookUp name: 5VYPCDWMWOVZTOTKO4ZV5XC5II.nile.trondisco.net
+17:58:08.063 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 5VYPCDWMWOVZTOTKO4ZV5XC5II.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:08.065 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending 5VYPCDWMWOVZTOTKO4ZV5XC5II.nile.trondisco.net./TXT, id=64195 to udp/123.125.81.6:53
+17:58:08.437 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for 5VYPCDWMWOVZTOTKO4ZV5XC5II.nile.trondisco.net./TXT
+17:58:08.437 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried 5VYPCDWMWOVZTOTKO4ZV5XC5II.nile.trondisco.net./TXT, id=64195: SUCCESSFUL
+17:58:08.437 [Test worker] DEBUG net - Succeed to use dns: 123.125.81.6, cur cost: 374ms, total cost: 374ms
+17:58:08.438 [Test worker] INFO net - LookUp name: TRQ2SJLFZ4NKHIAGYFVMXCEUDQ.nile.trondisco.net
+17:58:08.438 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for TRQ2SJLFZ4NKHIAGYFVMXCEUDQ.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:08.439 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending TRQ2SJLFZ4NKHIAGYFVMXCEUDQ.nile.trondisco.net./TXT, id=35779 to udp/9.9.9.9:53
+17:58:08.655 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for TRQ2SJLFZ4NKHIAGYFVMXCEUDQ.nile.trondisco.net./TXT
+17:58:08.655 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried TRQ2SJLFZ4NKHIAGYFVMXCEUDQ.nile.trondisco.net./TXT, id=35779: SUCCESSFUL
+17:58:08.655 [Test worker] DEBUG net - Succeed to use dns: 9.9.9.9, cur cost: 217ms, total cost: 217ms
+17:58:08.656 [Test worker] INFO net - LookUp name: 7QM775NRWWAOSCUFJ4IVTOIOJE.nile.trondisco.net
+17:58:08.656 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 7QM775NRWWAOSCUFJ4IVTOIOJE.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:08.656 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending 7QM775NRWWAOSCUFJ4IVTOIOJE.nile.trondisco.net./TXT, id=41959 to udp/140.207.198.6:53
+17:58:09.119 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for 7QM775NRWWAOSCUFJ4IVTOIOJE.nile.trondisco.net./TXT
+17:58:09.120 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried 7QM775NRWWAOSCUFJ4IVTOIOJE.nile.trondisco.net./TXT, id=41959: SUCCESSFUL
+17:58:09.120 [Test worker] DEBUG net - Succeed to use dns: 140.207.198.6, cur cost: 464ms, total cost: 464ms
+17:58:09.121 [Test worker] INFO net - LookUp name: BPXGFABNMXJOVYHWUW62V4UNOI.nile.trondisco.net
+17:58:09.121 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for BPXGFABNMXJOVYHWUW62V4UNOI.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:09.121 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending BPXGFABNMXJOVYHWUW62V4UNOI.nile.trondisco.net./TXT, id=21301 to udp/8.8.8.8:53
+17:58:09.304 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for BPXGFABNMXJOVYHWUW62V4UNOI.nile.trondisco.net./TXT
+17:58:09.304 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried BPXGFABNMXJOVYHWUW62V4UNOI.nile.trondisco.net./TXT, id=21301: SUCCESSFUL
+17:58:09.304 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 183ms, total cost: 183ms
+17:58:09.305 [Test worker] INFO net - LookUp name: TKAIFBRPQMKATD6WKUBFXYAA4E.nile.trondisco.net
+17:58:09.305 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for TKAIFBRPQMKATD6WKUBFXYAA4E.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:09.306 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending TKAIFBRPQMKATD6WKUBFXYAA4E.nile.trondisco.net./TXT, id=12251 to udp/9.9.9.9:53
+17:58:09.325 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for TKAIFBRPQMKATD6WKUBFXYAA4E.nile.trondisco.net./TXT
+17:58:09.326 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried TKAIFBRPQMKATD6WKUBFXYAA4E.nile.trondisco.net./TXT, id=12251: SUCCESSFUL
+17:58:09.326 [Test worker] DEBUG net - Succeed to use dns: 9.9.9.9, cur cost: 21ms, total cost: 21ms
+17:58:09.326 [Test worker] INFO net - LookUp name: 23PBHE3GOYXNM5YAINKKHY4J5M.nile.trondisco.net
+17:58:09.326 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 23PBHE3GOYXNM5YAINKKHY4J5M.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:09.327 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending 23PBHE3GOYXNM5YAINKKHY4J5M.nile.trondisco.net./TXT, id=18928 to udp/114.114.114.114:53
+17:58:09.525 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for 23PBHE3GOYXNM5YAINKKHY4J5M.nile.trondisco.net./TXT
+17:58:09.525 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried 23PBHE3GOYXNM5YAINKKHY4J5M.nile.trondisco.net./TXT, id=18928: SUCCESSFUL
+17:58:09.525 [Test worker] DEBUG net - Succeed to use dns: 114.114.114.114, cur cost: 199ms, total cost: 199ms
+17:58:09.526 [Test worker] INFO net - LookUp name: OER7RWUVK3WRAAR74L5KMH2QUM.nile.trondisco.net
+17:58:09.526 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for OER7RWUVK3WRAAR74L5KMH2QUM.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:09.527 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending OER7RWUVK3WRAAR74L5KMH2QUM.nile.trondisco.net./TXT, id=53638 to udp/114.114.115.115:53
+17:58:09.767 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for OER7RWUVK3WRAAR74L5KMH2QUM.nile.trondisco.net./TXT
+17:58:09.767 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried OER7RWUVK3WRAAR74L5KMH2QUM.nile.trondisco.net./TXT, id=53638: SUCCESSFUL
+17:58:09.768 [Test worker] DEBUG net - Succeed to use dns: 114.114.115.115, cur cost: 242ms, total cost: 242ms
+17:58:09.768 [Test worker] INFO net - LookUp name: 42UTRYDQPQOV3IWTQ3Z4NBZJSY.nile.trondisco.net
+17:58:09.769 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 42UTRYDQPQOV3IWTQ3Z4NBZJSY.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:09.769 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending 42UTRYDQPQOV3IWTQ3Z4NBZJSY.nile.trondisco.net./TXT, id=53610 to udp/223.5.5.5:53
+17:58:09.961 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for 42UTRYDQPQOV3IWTQ3Z4NBZJSY.nile.trondisco.net./TXT
+17:58:09.961 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried 42UTRYDQPQOV3IWTQ3Z4NBZJSY.nile.trondisco.net./TXT, id=53610: SUCCESSFUL
+17:58:09.962 [Test worker] DEBUG net - Succeed to use dns: 223.5.5.5, cur cost: 193ms, total cost: 193ms
+17:58:09.962 [Test worker] INFO net - LookUp name: 35ZLFX7OL55CNV73QTZ3OVGXUA.nile.trondisco.net
+17:58:09.962 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 35ZLFX7OL55CNV73QTZ3OVGXUA.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:09.962 [Test worker] DEBUG net - Succeed to use dns: 8.8.4.4, cur cost: 0ms, total cost: 0ms
+17:58:09.963 [Test worker] INFO net - LookUp name: KGKJFAI2Q2KIYVW7K3R6FL7ZOU.nile.trondisco.net
+17:58:09.963 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for KGKJFAI2Q2KIYVW7K3R6FL7ZOU.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:09.963 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending KGKJFAI2Q2KIYVW7K3R6FL7ZOU.nile.trondisco.net./TXT, id=58290 to udp/114.114.114.114:53
+17:58:10.198 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for KGKJFAI2Q2KIYVW7K3R6FL7ZOU.nile.trondisco.net./TXT
+17:58:10.198 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried KGKJFAI2Q2KIYVW7K3R6FL7ZOU.nile.trondisco.net./TXT, id=58290: SUCCESSFUL
+17:58:10.198 [Test worker] DEBUG net - Succeed to use dns: 114.114.114.114, cur cost: 235ms, total cost: 235ms
+17:58:10.199 [Test worker] INFO net - LookUp name: QKPYBCTJSERFH6CGAMYXZIQUDU.nile.trondisco.net
+17:58:10.200 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for QKPYBCTJSERFH6CGAMYXZIQUDU.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:10.200 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending QKPYBCTJSERFH6CGAMYXZIQUDU.nile.trondisco.net./TXT, id=46770 to udp/117.50.22.22:53
+17:58:10.575 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for QKPYBCTJSERFH6CGAMYXZIQUDU.nile.trondisco.net./TXT
+17:58:10.575 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried QKPYBCTJSERFH6CGAMYXZIQUDU.nile.trondisco.net./TXT, id=46770: SUCCESSFUL
+17:58:10.576 [Test worker] DEBUG net - Succeed to use dns: 117.50.22.22, cur cost: 376ms, total cost: 376ms
+17:58:10.576 [Test worker] INFO net - LookUp name: B2VZMS7XXOBVBDPCDBPPPGNTL4.nile.trondisco.net
+17:58:10.576 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for B2VZMS7XXOBVBDPCDBPPPGNTL4.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:10.576 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending B2VZMS7XXOBVBDPCDBPPPGNTL4.nile.trondisco.net./TXT, id=23618 to udp/114.114.115.115:53
+17:58:10.799 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for B2VZMS7XXOBVBDPCDBPPPGNTL4.nile.trondisco.net./TXT
+17:58:10.799 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried B2VZMS7XXOBVBDPCDBPPPGNTL4.nile.trondisco.net./TXT, id=23618: SUCCESSFUL
+17:58:10.799 [Test worker] DEBUG net - Succeed to use dns: 114.114.115.115, cur cost: 223ms, total cost: 223ms
+17:58:10.800 [Test worker] INFO net - LookUp name: UQXL277ZAPUKXPWETCVYS4RF7U.nile.trondisco.net
+17:58:10.800 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for UQXL277ZAPUKXPWETCVYS4RF7U.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:10.800 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending UQXL277ZAPUKXPWETCVYS4RF7U.nile.trondisco.net./TXT, id=12044 to udp/8.8.8.8:53
+17:58:11.012 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for UQXL277ZAPUKXPWETCVYS4RF7U.nile.trondisco.net./TXT
+17:58:11.013 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried UQXL277ZAPUKXPWETCVYS4RF7U.nile.trondisco.net./TXT, id=12044: SUCCESSFUL
+17:58:11.013 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 213ms, total cost: 213ms
+17:58:11.013 [Test worker] INFO net - LookUp name: XGU6CG6ML7ARN75FD4ROKSEQPM.nile.trondisco.net
+17:58:11.014 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for XGU6CG6ML7ARN75FD4ROKSEQPM.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:11.014 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending XGU6CG6ML7ARN75FD4ROKSEQPM.nile.trondisco.net./TXT, id=53746 to udp/101.226.4.6:53
+17:58:11.450 [connPool] DEBUG net - Lack size:8, connectNodes size:0, is disconnect trigger: false
+17:58:12.016 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for XGU6CG6ML7ARN75FD4ROKSEQPM.nile.trondisco.net./TXT, id=53746 failed using resolver SimpleResolver [/101.226.4.6:53]
+java.net.SocketTimeoutException: Query timed out
+	at org.xbill.DNS.NioUdpClient.checkTransactionTimeouts(NioUdpClient.java:78)
+	at org.xbill.DNS.NioClient.runTasks(NioClient.java:172)
+	at org.xbill.DNS.NioClient.runSelector(NioClient.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+17:58:12.017 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for XGU6CG6ML7ARN75FD4ROKSEQPM.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:12.017 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending XGU6CG6ML7ARN75FD4ROKSEQPM.nile.trondisco.net./TXT, id=57547 to udp/101.226.4.6:53
+17:58:12.818 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for XGU6CG6ML7ARN75FD4ROKSEQPM.nile.trondisco.net./TXT
+17:58:12.818 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried XGU6CG6ML7ARN75FD4ROKSEQPM.nile.trondisco.net./TXT, id=57547: SUCCESSFUL
+17:58:12.818 [Test worker] DEBUG net - Succeed to use dns: 101.226.4.6, cur cost: 1804ms, total cost: 1805ms
+17:58:12.819 [Test worker] INFO net - LookUp name: B5P5ZWL6FKQRBMYR55U2YRTWZI.nile.trondisco.net
+17:58:12.819 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for B5P5ZWL6FKQRBMYR55U2YRTWZI.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:12.819 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending B5P5ZWL6FKQRBMYR55U2YRTWZI.nile.trondisco.net./TXT, id=23907 to udp/123.125.81.6:53
+17:58:13.197 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for B5P5ZWL6FKQRBMYR55U2YRTWZI.nile.trondisco.net./TXT
+17:58:13.197 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried B5P5ZWL6FKQRBMYR55U2YRTWZI.nile.trondisco.net./TXT, id=23907: SUCCESSFUL
+17:58:13.197 [Test worker] DEBUG net - Succeed to use dns: 123.125.81.6, cur cost: 378ms, total cost: 378ms
+17:58:13.198 [Test worker] INFO net - LookUp name: HXTJC4W6MGP3Y4W7UEEL5TWDLM.nile.trondisco.net
+17:58:13.199 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for HXTJC4W6MGP3Y4W7UEEL5TWDLM.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:13.199 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending HXTJC4W6MGP3Y4W7UEEL5TWDLM.nile.trondisco.net./TXT, id=15742 to udp/114.114.115.115:53
+17:58:13.500 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for HXTJC4W6MGP3Y4W7UEEL5TWDLM.nile.trondisco.net./TXT
+17:58:13.501 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried HXTJC4W6MGP3Y4W7UEEL5TWDLM.nile.trondisco.net./TXT, id=15742: SUCCESSFUL
+17:58:13.501 [Test worker] DEBUG net - Succeed to use dns: 114.114.115.115, cur cost: 302ms, total cost: 302ms
+17:58:13.502 [Test worker] INFO net - LookUp name: UYJWANLNOWYEIT7TPM7DBY2YFY.nile.trondisco.net
+17:58:13.502 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for UYJWANLNOWYEIT7TPM7DBY2YFY.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:13.502 [Test worker] DEBUG net - Succeed to use dns: 101.226.4.6, cur cost: 0ms, total cost: 0ms
+17:58:13.511 [Test worker] INFO net - LookUp name: ZY752RBAJATVMSNJPTDP6H3VXM.nile.trondisco.net
+17:58:13.511 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for ZY752RBAJATVMSNJPTDP6H3VXM.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:13.512 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending ZY752RBAJATVMSNJPTDP6H3VXM.nile.trondisco.net./TXT, id=8887 to udp/8.8.8.8:53
+17:58:13.657 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for ZY752RBAJATVMSNJPTDP6H3VXM.nile.trondisco.net./TXT
+17:58:13.657 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried ZY752RBAJATVMSNJPTDP6H3VXM.nile.trondisco.net./TXT, id=8887: SUCCESSFUL
+17:58:13.657 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 146ms, total cost: 146ms
+17:58:13.658 [Test worker] INFO net - LookUp name: VZCQMKOSPMCQNR2UYK2NHS3ZCU.nile.trondisco.net
+17:58:13.658 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for VZCQMKOSPMCQNR2UYK2NHS3ZCU.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:13.658 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending VZCQMKOSPMCQNR2UYK2NHS3ZCU.nile.trondisco.net./TXT, id=9783 to udp/140.207.198.6:53
+17:58:14.431 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for VZCQMKOSPMCQNR2UYK2NHS3ZCU.nile.trondisco.net./TXT
+17:58:14.431 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried VZCQMKOSPMCQNR2UYK2NHS3ZCU.nile.trondisco.net./TXT, id=9783: SUCCESSFUL
+17:58:14.432 [Test worker] DEBUG net - Succeed to use dns: 140.207.198.6, cur cost: 774ms, total cost: 774ms
+17:58:14.432 [Test worker] INFO net - LookUp name: PU6AV7EDMGPMOCVLG54O7JP2ZQ.nile.trondisco.net
+17:58:14.433 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for PU6AV7EDMGPMOCVLG54O7JP2ZQ.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:14.433 [Test worker] DEBUG net - Succeed to use dns: 117.50.22.22, cur cost: 0ms, total cost: 1ms
+17:58:14.433 [Test worker] INFO net - LookUp name: FHSWQGOWKPH6VVABARNTM3L6Y4.nile.trondisco.net
+17:58:14.433 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for FHSWQGOWKPH6VVABARNTM3L6Y4.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:14.433 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending FHSWQGOWKPH6VVABARNTM3L6Y4.nile.trondisco.net./TXT, id=3179 to udp/140.207.198.6:53
+17:58:14.839 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for FHSWQGOWKPH6VVABARNTM3L6Y4.nile.trondisco.net./TXT
+17:58:14.840 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried FHSWQGOWKPH6VVABARNTM3L6Y4.nile.trondisco.net./TXT, id=3179: SUCCESSFUL
+17:58:14.840 [Test worker] DEBUG net - Succeed to use dns: 140.207.198.6, cur cost: 407ms, total cost: 407ms
+17:58:14.840 [Test worker] INFO net - LookUp name: ZP46BXPWWIAUPZZOB26SF3RV24.nile.trondisco.net
+17:58:14.841 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for ZP46BXPWWIAUPZZOB26SF3RV24.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:14.841 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending ZP46BXPWWIAUPZZOB26SF3RV24.nile.trondisco.net./TXT, id=6931 to udp/114.114.114.114:53
+17:58:15.041 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for ZP46BXPWWIAUPZZOB26SF3RV24.nile.trondisco.net./TXT
+17:58:15.041 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried ZP46BXPWWIAUPZZOB26SF3RV24.nile.trondisco.net./TXT, id=6931: SUCCESSFUL
+17:58:15.041 [Test worker] DEBUG net - Succeed to use dns: 114.114.114.114, cur cost: 200ms, total cost: 200ms
+17:58:15.041 [Test worker] INFO net - LookUp name: UHFCWKS6UCRNWQT2VNDTN6Q6XQ.nile.trondisco.net
+17:58:15.042 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for UHFCWKS6UCRNWQT2VNDTN6Q6XQ.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:15.042 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending UHFCWKS6UCRNWQT2VNDTN6Q6XQ.nile.trondisco.net./TXT, id=58984 to udp/123.125.81.6:53
+17:58:15.051 [connPool] DEBUG net - Lack size:8, connectNodes size:0, is disconnect trigger: false
+17:58:15.755 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for UHFCWKS6UCRNWQT2VNDTN6Q6XQ.nile.trondisco.net./TXT
+17:58:15.766 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried UHFCWKS6UCRNWQT2VNDTN6Q6XQ.nile.trondisco.net./TXT, id=58984: SUCCESSFUL
+17:58:15.766 [Test worker] DEBUG net - Succeed to use dns: 123.125.81.6, cur cost: 724ms, total cost: 724ms
+17:58:15.766 [Test worker] INFO net - LookUp name: BWV4OZ5FZOUHDG5RWAXDKJGF4A.nile.trondisco.net
+17:58:15.767 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for BWV4OZ5FZOUHDG5RWAXDKJGF4A.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:15.767 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 0ms, total cost: 0ms
+17:58:15.767 [Test worker] INFO net - LookUp name: T53MH6S55TGKIRPWWA5SRKWHVU.nile.trondisco.net
+17:58:15.767 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for T53MH6S55TGKIRPWWA5SRKWHVU.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:15.767 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending T53MH6S55TGKIRPWWA5SRKWHVU.nile.trondisco.net./TXT, id=41873 to udp/223.5.5.5:53
+17:58:16.258 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for T53MH6S55TGKIRPWWA5SRKWHVU.nile.trondisco.net./TXT
+17:58:16.258 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried T53MH6S55TGKIRPWWA5SRKWHVU.nile.trondisco.net./TXT, id=41873: SUCCESSFUL
+17:58:16.258 [Test worker] DEBUG net - Succeed to use dns: 223.5.5.5, cur cost: 491ms, total cost: 491ms
+17:58:16.259 [Test worker] INFO net - LookUp name: NEISMGRFIXFDXITKASIQKPGCCM.nile.trondisco.net
+17:58:16.259 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for NEISMGRFIXFDXITKASIQKPGCCM.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:16.259 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending NEISMGRFIXFDXITKASIQKPGCCM.nile.trondisco.net./TXT, id=40912 to udp/123.125.81.6:53
+17:58:16.811 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for NEISMGRFIXFDXITKASIQKPGCCM.nile.trondisco.net./TXT
+17:58:16.811 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried NEISMGRFIXFDXITKASIQKPGCCM.nile.trondisco.net./TXT, id=40912: SUCCESSFUL
+17:58:16.811 [Test worker] DEBUG net - Succeed to use dns: 123.125.81.6, cur cost: 552ms, total cost: 552ms
+17:58:16.813 [Test worker] INFO net - LookUp name: I3Z55HEYMG2RM3AXKI2P7P7STI.nile.trondisco.net
+17:58:16.813 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for I3Z55HEYMG2RM3AXKI2P7P7STI.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:16.813 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending I3Z55HEYMG2RM3AXKI2P7P7STI.nile.trondisco.net./TXT, id=1202 to udp/223.6.6.6:53
+17:58:16.990 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for I3Z55HEYMG2RM3AXKI2P7P7STI.nile.trondisco.net./TXT
+17:58:16.990 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried I3Z55HEYMG2RM3AXKI2P7P7STI.nile.trondisco.net./TXT, id=1202: SUCCESSFUL
+17:58:16.990 [Test worker] DEBUG net - Succeed to use dns: 223.6.6.6, cur cost: 177ms, total cost: 177ms
+17:58:16.990 [Test worker] INFO net - LookUp name: 5XYXACSFG5UFV3J3BKRSDODO2Q.nile.trondisco.net
+17:58:16.990 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 5XYXACSFG5UFV3J3BKRSDODO2Q.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:16.991 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending 5XYXACSFG5UFV3J3BKRSDODO2Q.nile.trondisco.net./TXT, id=62234 to udp/8.8.8.8:53
+17:58:17.504 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for 5XYXACSFG5UFV3J3BKRSDODO2Q.nile.trondisco.net./TXT
+17:58:17.504 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried 5XYXACSFG5UFV3J3BKRSDODO2Q.nile.trondisco.net./TXT, id=62234: SUCCESSFUL
+17:58:17.504 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 514ms, total cost: 514ms
+17:58:17.506 [Test worker] INFO net - LookUp name: ZKDBBTXQ3H3KKIIUMYRSWWCCH4.nile.trondisco.net
+17:58:17.506 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for ZKDBBTXQ3H3KKIIUMYRSWWCCH4.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:17.506 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending ZKDBBTXQ3H3KKIIUMYRSWWCCH4.nile.trondisco.net./TXT, id=50115 to udp/9.9.9.9:53
+17:58:18.029 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for ZKDBBTXQ3H3KKIIUMYRSWWCCH4.nile.trondisco.net./TXT
+17:58:18.030 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried ZKDBBTXQ3H3KKIIUMYRSWWCCH4.nile.trondisco.net./TXT, id=50115: SUCCESSFUL
+17:58:18.030 [Test worker] DEBUG net - Succeed to use dns: 9.9.9.9, cur cost: 524ms, total cost: 524ms
+17:58:18.031 [Test worker] INFO net - LookUp name: V22F3H2POP2I572AWXFZ5SOZ6U.nile.trondisco.net
+17:58:18.031 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for V22F3H2POP2I572AWXFZ5SOZ6U.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:18.032 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending V22F3H2POP2I572AWXFZ5SOZ6U.nile.trondisco.net./TXT, id=8428 to udp/114.114.114.114:53
+17:58:18.380 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for V22F3H2POP2I572AWXFZ5SOZ6U.nile.trondisco.net./TXT
+17:58:18.381 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried V22F3H2POP2I572AWXFZ5SOZ6U.nile.trondisco.net./TXT, id=8428: SUCCESSFUL
+17:58:18.381 [Test worker] DEBUG net - Succeed to use dns: 114.114.114.114, cur cost: 350ms, total cost: 350ms
+17:58:18.382 [Test worker] INFO net - LookUp name: A5HBGPLVOQOTQ777XLVAF7NO2I.nile.trondisco.net
+17:58:18.382 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for A5HBGPLVOQOTQ777XLVAF7NO2I.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:18.383 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending A5HBGPLVOQOTQ777XLVAF7NO2I.nile.trondisco.net./TXT, id=29925 to udp/223.5.5.5:53
+17:58:18.660 [connPool] DEBUG net - Lack size:8, connectNodes size:0, is disconnect trigger: false
+17:58:18.746 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for A5HBGPLVOQOTQ777XLVAF7NO2I.nile.trondisco.net./TXT
+17:58:18.746 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried A5HBGPLVOQOTQ777XLVAF7NO2I.nile.trondisco.net./TXT, id=29925: SUCCESSFUL
+17:58:18.746 [Test worker] DEBUG net - Succeed to use dns: 223.5.5.5, cur cost: 364ms, total cost: 364ms
+17:58:18.747 [Test worker] INFO net - LookUp name: BALWC2FQ4FM477NWUGUE6DSSKQ.nile.trondisco.net
+17:58:18.749 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for BALWC2FQ4FM477NWUGUE6DSSKQ.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:18.752 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending BALWC2FQ4FM477NWUGUE6DSSKQ.nile.trondisco.net./TXT, id=33812 to udp/218.30.118.6:53
+17:58:19.758 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for BALWC2FQ4FM477NWUGUE6DSSKQ.nile.trondisco.net./TXT, id=33812 failed using resolver SimpleResolver [/218.30.118.6:53]
+java.io.IOException: Timed out while trying to resolve BALWC2FQ4FM477NWUGUE6DSSKQ.nile.trondisco.net./TXT, id=33812
+	at org.xbill.DNS.Resolver.send(Resolver.java:172)
+	at org.xbill.DNS.Lookup.lookup(Lookup.java:580)
+	at org.xbill.DNS.Lookup.resolve(Lookup.java:660)
+	at org.xbill.DNS.Lookup.run(Lookup.java:678)
+	at org.tron.p2p.dns.lookup.LookUpTxt.lookUpTxt(LookUpTxt.java:78)
+	at org.tron.p2p.dns.lookup.LookUpTxt.lookUpTxt(LookUpTxt.java:55)
+	at org.tron.p2p.dns.sync.Client.doResolveEntry(Client.java:142)
+	at org.tron.p2p.dns.sync.Client.resolveEntry(Client.java:128)
+	at org.tron.p2p.dns.sync.SubtreeSync.resolveNext(SubtreeSync.java:58)
+	at org.tron.p2p.dns.sync.SubtreeSync.resolveAll(SubtreeSync.java:48)
+	at org.tron.p2p.dns.sync.ClientTree.syncAll(ClientTree.java:68)
+	at org.tron.p2p.dns.sync.Client.syncTree(Client.java:85)
+	at org.tron.p2p.dns.SyncTest.testSync(SyncTest.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:108)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:39)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.xbill.DNS.Resolver.send(Resolver.java:153)
+	... 54 common frames omitted
+17:58:19.759 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for BALWC2FQ4FM477NWUGUE6DSSKQ.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:19.760 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending BALWC2FQ4FM477NWUGUE6DSSKQ.nile.trondisco.net./TXT, id=62599 to udp/218.30.118.6:53
+17:58:20.521 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for BALWC2FQ4FM477NWUGUE6DSSKQ.nile.trondisco.net./TXT
+17:58:20.522 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried BALWC2FQ4FM477NWUGUE6DSSKQ.nile.trondisco.net./TXT, id=62599: SUCCESSFUL
+17:58:20.522 [Test worker] DEBUG net - Succeed to use dns: 218.30.118.6, cur cost: 1774ms, total cost: 1775ms
+17:58:20.524 [Test worker] INFO net - LookUp name: PVLAXANLEU5AGHT3LKW7MFYKM4.nile.trondisco.net
+17:58:20.525 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for PVLAXANLEU5AGHT3LKW7MFYKM4.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:20.525 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending PVLAXANLEU5AGHT3LKW7MFYKM4.nile.trondisco.net./TXT, id=51555 to udp/101.226.4.6:53
+17:58:21.240 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for PVLAXANLEU5AGHT3LKW7MFYKM4.nile.trondisco.net./TXT
+17:58:21.241 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried PVLAXANLEU5AGHT3LKW7MFYKM4.nile.trondisco.net./TXT, id=51555: SUCCESSFUL
+17:58:21.241 [Test worker] DEBUG net - Succeed to use dns: 101.226.4.6, cur cost: 716ms, total cost: 716ms
+17:58:21.241 [Test worker] INFO net - LookUp name: OFZ7TPZRVAP6PCR2MVHW6TBUYE.nile.trondisco.net
+17:58:21.241 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for OFZ7TPZRVAP6PCR2MVHW6TBUYE.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:21.242 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending OFZ7TPZRVAP6PCR2MVHW6TBUYE.nile.trondisco.net./TXT, id=24849 to udp/117.50.22.22:53
+17:58:21.666 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for OFZ7TPZRVAP6PCR2MVHW6TBUYE.nile.trondisco.net./TXT
+17:58:21.666 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried OFZ7TPZRVAP6PCR2MVHW6TBUYE.nile.trondisco.net./TXT, id=24849: SUCCESSFUL
+17:58:21.666 [Test worker] DEBUG net - Succeed to use dns: 117.50.22.22, cur cost: 425ms, total cost: 425ms
+17:58:21.667 [Test worker] INFO net - LookUp name: DUB7WGGGMO34S4QNWKYCWMHFFE.nile.trondisco.net
+17:58:21.667 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for DUB7WGGGMO34S4QNWKYCWMHFFE.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:21.667 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending DUB7WGGGMO34S4QNWKYCWMHFFE.nile.trondisco.net./TXT, id=58731 to udp/123.125.81.6:53
+17:58:22.102 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for DUB7WGGGMO34S4QNWKYCWMHFFE.nile.trondisco.net./TXT
+17:58:22.102 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried DUB7WGGGMO34S4QNWKYCWMHFFE.nile.trondisco.net./TXT, id=58731: SUCCESSFUL
+17:58:22.102 [Test worker] DEBUG net - Succeed to use dns: 123.125.81.6, cur cost: 435ms, total cost: 435ms
+17:58:22.103 [Test worker] INFO net - LookUp name: MD3MIBSLQZMRAE4TAEBYQKS4Z4.nile.trondisco.net
+17:58:22.103 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for MD3MIBSLQZMRAE4TAEBYQKS4Z4.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:22.103 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending MD3MIBSLQZMRAE4TAEBYQKS4Z4.nile.trondisco.net./TXT, id=11574 to udp/8.8.4.4:53
+17:58:22.260 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for MD3MIBSLQZMRAE4TAEBYQKS4Z4.nile.trondisco.net./TXT
+17:58:22.260 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried MD3MIBSLQZMRAE4TAEBYQKS4Z4.nile.trondisco.net./TXT, id=11574: SUCCESSFUL
+17:58:22.260 [Test worker] DEBUG net - Succeed to use dns: 8.8.4.4, cur cost: 157ms, total cost: 157ms
+17:58:22.261 [Test worker] INFO net - LookUp name: ZJ7FRIIOKE3PDVDEARIECJXRFA.nile.trondisco.net
+17:58:22.261 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for ZJ7FRIIOKE3PDVDEARIECJXRFA.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:22.261 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending ZJ7FRIIOKE3PDVDEARIECJXRFA.nile.trondisco.net./TXT, id=54025 to udp/114.114.114.114:53
+17:58:22.270 [connPool] DEBUG net - Lack size:8, connectNodes size:0, is disconnect trigger: false
+17:58:22.545 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for ZJ7FRIIOKE3PDVDEARIECJXRFA.nile.trondisco.net./TXT
+17:58:22.546 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried ZJ7FRIIOKE3PDVDEARIECJXRFA.nile.trondisco.net./TXT, id=54025: SUCCESSFUL
+17:58:22.546 [Test worker] DEBUG net - Succeed to use dns: 114.114.114.114, cur cost: 285ms, total cost: 285ms
+17:58:22.546 [Test worker] INFO net - LookUp name: QVK5PRAQXTUK43CTM6PUQYDXIY.nile.trondisco.net
+17:58:22.546 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for QVK5PRAQXTUK43CTM6PUQYDXIY.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:22.546 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending QVK5PRAQXTUK43CTM6PUQYDXIY.nile.trondisco.net./TXT, id=10718 to udp/8.8.8.8:53
+17:58:22.729 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for QVK5PRAQXTUK43CTM6PUQYDXIY.nile.trondisco.net./TXT
+17:58:22.729 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried QVK5PRAQXTUK43CTM6PUQYDXIY.nile.trondisco.net./TXT, id=10718: SUCCESSFUL
+17:58:22.729 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 183ms, total cost: 183ms
+17:58:22.730 [Test worker] INFO net - LookUp name: QVVNHNEDSFJCGCO6O34FUMWSM4.nile.trondisco.net
+17:58:22.730 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for QVVNHNEDSFJCGCO6O34FUMWSM4.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:22.731 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending QVVNHNEDSFJCGCO6O34FUMWSM4.nile.trondisco.net./TXT, id=19130 to udp/8.8.8.8:53
+17:58:22.935 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for QVVNHNEDSFJCGCO6O34FUMWSM4.nile.trondisco.net./TXT
+17:58:22.936 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried QVVNHNEDSFJCGCO6O34FUMWSM4.nile.trondisco.net./TXT, id=19130: SUCCESSFUL
+17:58:22.936 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 206ms, total cost: 206ms
+17:58:22.937 [Test worker] INFO net - LookUp name: TRRVPL3RQWNSFYLDMBPWLGMMV4.nile.trondisco.net
+17:58:22.937 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for TRRVPL3RQWNSFYLDMBPWLGMMV4.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:22.937 [Test worker] DEBUG net - Succeed to use dns: 101.226.4.6, cur cost: 0ms, total cost: 0ms
+17:58:22.938 [Test worker] INFO net - LookUp name: 3ULHLUEUPGAPPFRQOICOEZBQI4.nile.trondisco.net
+17:58:22.938 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 3ULHLUEUPGAPPFRQOICOEZBQI4.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:22.938 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending 3ULHLUEUPGAPPFRQOICOEZBQI4.nile.trondisco.net./TXT, id=48031 to udp/9.9.9.9:53
+17:58:23.139 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for 3ULHLUEUPGAPPFRQOICOEZBQI4.nile.trondisco.net./TXT
+17:58:23.139 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried 3ULHLUEUPGAPPFRQOICOEZBQI4.nile.trondisco.net./TXT, id=48031: SUCCESSFUL
+17:58:23.139 [Test worker] DEBUG net - Succeed to use dns: 9.9.9.9, cur cost: 201ms, total cost: 201ms
+17:58:23.140 [Test worker] INFO net - LookUp name: QYLUHM67YIIFYCLO2MQNJCR654.nile.trondisco.net
+17:58:23.140 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for QYLUHM67YIIFYCLO2MQNJCR654.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:23.140 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 0ms, total cost: 0ms
+17:58:23.140 [Test worker] INFO net - LookUp name: XUZ3KZYVSABNLSN62MKQB47CKI.nile.trondisco.net
+17:58:23.140 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for XUZ3KZYVSABNLSN62MKQB47CKI.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:23.140 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending XUZ3KZYVSABNLSN62MKQB47CKI.nile.trondisco.net./TXT, id=11094 to udp/123.125.81.6:53
+17:58:23.595 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for XUZ3KZYVSABNLSN62MKQB47CKI.nile.trondisco.net./TXT
+17:58:23.595 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried XUZ3KZYVSABNLSN62MKQB47CKI.nile.trondisco.net./TXT, id=11094: SUCCESSFUL
+17:58:23.595 [Test worker] DEBUG net - Succeed to use dns: 123.125.81.6, cur cost: 455ms, total cost: 455ms
+17:58:23.595 [Test worker] INFO net - LookUp name: KZ2SQYYRGQ4XTXQV5GX2B3XR5Y.nile.trondisco.net
+17:58:23.595 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for KZ2SQYYRGQ4XTXQV5GX2B3XR5Y.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:23.595 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending KZ2SQYYRGQ4XTXQV5GX2B3XR5Y.nile.trondisco.net./TXT, id=43914 to udp/117.50.22.22:53
+17:58:24.142 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for KZ2SQYYRGQ4XTXQV5GX2B3XR5Y.nile.trondisco.net./TXT
+17:58:24.142 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried KZ2SQYYRGQ4XTXQV5GX2B3XR5Y.nile.trondisco.net./TXT, id=43914: SUCCESSFUL
+17:58:24.142 [Test worker] DEBUG net - Succeed to use dns: 117.50.22.22, cur cost: 547ms, total cost: 547ms
+17:58:24.144 [Test worker] INFO net - LookUp name: FXGEWM4E57ULJWPWEP3XVHUG7Q.nile.trondisco.net
+17:58:24.144 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for FXGEWM4E57ULJWPWEP3XVHUG7Q.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:24.145 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending FXGEWM4E57ULJWPWEP3XVHUG7Q.nile.trondisco.net./TXT, id=36609 to udp/114.114.114.114:53
+17:58:24.407 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for FXGEWM4E57ULJWPWEP3XVHUG7Q.nile.trondisco.net./TXT
+17:58:24.407 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried FXGEWM4E57ULJWPWEP3XVHUG7Q.nile.trondisco.net./TXT, id=36609: SUCCESSFUL
+17:58:24.407 [Test worker] DEBUG net - Succeed to use dns: 114.114.114.114, cur cost: 263ms, total cost: 263ms
+17:58:24.407 [Test worker] INFO net - LookUp name: 4O67ROA2DP4WS5EJIX4I4HNJXI.nile.trondisco.net
+17:58:24.408 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 4O67ROA2DP4WS5EJIX4I4HNJXI.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:24.408 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending 4O67ROA2DP4WS5EJIX4I4HNJXI.nile.trondisco.net./TXT, id=50722 to udp/9.9.9.9:53
+17:58:24.673 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for 4O67ROA2DP4WS5EJIX4I4HNJXI.nile.trondisco.net./TXT
+17:58:24.675 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried 4O67ROA2DP4WS5EJIX4I4HNJXI.nile.trondisco.net./TXT, id=50722: SUCCESSFUL
+17:58:24.675 [Test worker] DEBUG net - Succeed to use dns: 9.9.9.9, cur cost: 267ms, total cost: 267ms
+17:58:24.678 [Test worker] INFO net - LookUp name: KYP6E2CPUGRGMOB7ZC7LPI3ISU.nile.trondisco.net
+17:58:24.678 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for KYP6E2CPUGRGMOB7ZC7LPI3ISU.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:24.679 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending KYP6E2CPUGRGMOB7ZC7LPI3ISU.nile.trondisco.net./TXT, id=12278 to udp/123.125.81.6:53
+17:58:25.184 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for KYP6E2CPUGRGMOB7ZC7LPI3ISU.nile.trondisco.net./TXT
+17:58:25.184 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried KYP6E2CPUGRGMOB7ZC7LPI3ISU.nile.trondisco.net./TXT, id=12278: SUCCESSFUL
+17:58:25.184 [Test worker] DEBUG net - Succeed to use dns: 123.125.81.6, cur cost: 506ms, total cost: 506ms
+17:58:25.185 [Test worker] INFO net - LookUp name: 2IPDH225UH224CGM73TAA4M4VE.nile.trondisco.net
+17:58:25.188 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 2IPDH225UH224CGM73TAA4M4VE.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:25.188 [Test worker] DEBUG net - Succeed to use dns: 8.8.4.4, cur cost: 3ms, total cost: 3ms
+17:58:25.189 [Test worker] INFO net - LookUp name: DQO5YUR4ZNZ467WCIITX4KWN7Y.nile.trondisco.net
+17:58:25.189 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for DQO5YUR4ZNZ467WCIITX4KWN7Y.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:25.189 [Test worker] DEBUG net - Succeed to use dns: 8.8.4.4, cur cost: 0ms, total cost: 0ms
+17:58:25.189 [Test worker] INFO net - LookUp name: KXCY4AGHJJS5MMPYRF2LEN7SAM.nile.trondisco.net
+17:58:25.189 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for KXCY4AGHJJS5MMPYRF2LEN7SAM.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:25.190 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending KXCY4AGHJJS5MMPYRF2LEN7SAM.nile.trondisco.net./TXT, id=65062 to udp/9.9.9.9:53
+17:58:25.264 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for KXCY4AGHJJS5MMPYRF2LEN7SAM.nile.trondisco.net./TXT
+17:58:25.265 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried KXCY4AGHJJS5MMPYRF2LEN7SAM.nile.trondisco.net./TXT, id=65062: SUCCESSFUL
+17:58:25.265 [Test worker] DEBUG net - Succeed to use dns: 9.9.9.9, cur cost: 76ms, total cost: 76ms
+17:58:25.265 [Test worker] INFO net - LookUp name: 75KNSBCJZYJZQEMNFAMCROBCYI.nile.trondisco.net
+17:58:25.265 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 75KNSBCJZYJZQEMNFAMCROBCYI.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:25.265 [Test worker] DEBUG net - Succeed to use dns: 218.30.118.6, cur cost: 0ms, total cost: 0ms
+17:58:25.265 [Test worker] INFO net - LookUp name: 4TSID6EO2XDANMCI67JJZHJDJI.nile.trondisco.net
+17:58:25.265 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 4TSID6EO2XDANMCI67JJZHJDJI.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:25.265 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending 4TSID6EO2XDANMCI67JJZHJDJI.nile.trondisco.net./TXT, id=30325 to udp/101.226.4.6:53
+17:58:25.719 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for 4TSID6EO2XDANMCI67JJZHJDJI.nile.trondisco.net./TXT
+17:58:25.719 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried 4TSID6EO2XDANMCI67JJZHJDJI.nile.trondisco.net./TXT, id=30325: SUCCESSFUL
+17:58:25.720 [Test worker] DEBUG net - Succeed to use dns: 101.226.4.6, cur cost: 455ms, total cost: 455ms
+17:58:25.720 [Test worker] INFO net - LookUp name: Q22FOSFILPOTL4NNPW6RAAFVDE.nile.trondisco.net
+17:58:25.720 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for Q22FOSFILPOTL4NNPW6RAAFVDE.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:25.720 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 0ms, total cost: 0ms
+17:58:25.720 [Test worker] INFO net - LookUp name: 43SQFG2AUXWXP4UZHBAUYM4MQM.nile.trondisco.net
+17:58:25.720 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 43SQFG2AUXWXP4UZHBAUYM4MQM.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:25.720 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 0ms, total cost: 0ms
+17:58:25.720 [Test worker] INFO net - LookUp name: AVP76KJ7E6RMMNIURLNZPBBZBM.nile.trondisco.net
+17:58:25.721 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for AVP76KJ7E6RMMNIURLNZPBBZBM.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:25.721 [Test worker] DEBUG net - Succeed to use dns: 9.9.9.9, cur cost: 0ms, total cost: 1ms
+17:58:25.721 [Test worker] INFO net - LookUp name: EZZ6QMMJMQZK335C2MVU52QZ2E.nile.trondisco.net
+17:58:25.721 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for EZZ6QMMJMQZK335C2MVU52QZ2E.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:25.721 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 0ms, total cost: 0ms
+17:58:25.721 [Test worker] INFO net - LookUp name: NE4CLEOEWDM4JCDMP2USDZNIFM.nile.trondisco.net
+17:58:25.721 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for NE4CLEOEWDM4JCDMP2USDZNIFM.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:25.721 [Test worker] DEBUG net - Succeed to use dns: 117.50.11.11, cur cost: 0ms, total cost: 0ms
+17:58:25.721 [Test worker] INFO net - LookUp name: BM4B6ORLNMFWGYL6RQJL2MKBNU.nile.trondisco.net
+17:58:25.722 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for BM4B6ORLNMFWGYL6RQJL2MKBNU.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:25.722 [Test worker] DEBUG net - Succeed to use dns: 218.30.118.6, cur cost: 0ms, total cost: 0ms
+17:58:25.722 [Test worker] INFO net - LookUp name: MJUYW4LVEJ4DALWBKBTB3SFJYU.nile.trondisco.net
+17:58:25.722 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for MJUYW4LVEJ4DALWBKBTB3SFJYU.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:25.722 [Test worker] DEBUG net - Succeed to use dns: 117.50.11.11, cur cost: 0ms, total cost: 0ms
+17:58:25.722 [Test worker] INFO net - LookUp name: LO7Q7OURE2XNV5VH4KXX6GHMIY.nile.trondisco.net
+17:58:25.722 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for LO7Q7OURE2XNV5VH4KXX6GHMIY.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:25.722 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending LO7Q7OURE2XNV5VH4KXX6GHMIY.nile.trondisco.net./TXT, id=2326 to udp/117.50.22.22:53
+17:58:25.874 [connPool] DEBUG net - Lack size:8, connectNodes size:0, is disconnect trigger: false
+17:58:26.286 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for LO7Q7OURE2XNV5VH4KXX6GHMIY.nile.trondisco.net./TXT
+17:58:26.287 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried LO7Q7OURE2XNV5VH4KXX6GHMIY.nile.trondisco.net./TXT, id=2326: SUCCESSFUL
+17:58:26.287 [Test worker] DEBUG net - Succeed to use dns: 117.50.22.22, cur cost: 565ms, total cost: 565ms
+17:58:26.288 [Test worker] INFO net - LookUp name: E25UDK3XPWE2ZCEGZEN55HT33Q.nile.trondisco.net
+17:58:26.288 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for E25UDK3XPWE2ZCEGZEN55HT33Q.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:26.288 [Test worker] DEBUG net - Succeed to use dns: 140.207.198.6, cur cost: 0ms, total cost: 0ms
+17:58:26.288 [Test worker] INFO net - LookUp name: N6PCEXFTBPEMHQH3L5JMBKPBIU.nile.trondisco.net
+17:58:26.288 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for N6PCEXFTBPEMHQH3L5JMBKPBIU.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:26.288 [Test worker] DEBUG net - Succeed to use dns: 218.30.118.6, cur cost: 0ms, total cost: 0ms
+17:58:26.288 [Test worker] INFO net - LookUp name: 473QW2LHA5WDJSA26YNKTTLLOU.nile.trondisco.net
+17:58:26.288 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 473QW2LHA5WDJSA26YNKTTLLOU.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:26.288 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 0ms, total cost: 0ms
+17:58:26.288 [Test worker] INFO net - LookUp name: AP7Q6WYK6F6VFD6I37IWHN7LWQ.nile.trondisco.net
+17:58:26.288 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for AP7Q6WYK6F6VFD6I37IWHN7LWQ.nile.trondisco.net./TXT, cache answer: SUCCESSFUL
+17:58:26.288 [Test worker] DEBUG net - Succeed to use dns: 114.114.114.114, cur cost: 0ms, total cost: 0ms
+17:58:26.288 [Test worker] INFO net - LookUp name: WD542JEIICDJOONZMJLRRUVF7A.nile.trondisco.net
+17:58:26.288 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for WD542JEIICDJOONZMJLRRUVF7A.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:26.288 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending WD542JEIICDJOONZMJLRRUVF7A.nile.trondisco.net./TXT, id=46629 to udp/140.207.198.6:53
+17:58:26.823 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for WD542JEIICDJOONZMJLRRUVF7A.nile.trondisco.net./TXT
+17:58:26.823 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried WD542JEIICDJOONZMJLRRUVF7A.nile.trondisco.net./TXT, id=46629: SUCCESSFUL
+17:58:26.823 [Test worker] DEBUG net - Succeed to use dns: 140.207.198.6, cur cost: 535ms, total cost: 535ms
+17:58:26.824 [Test worker] INFO net - LookUp name: GFA2RPWKTZ2A4BG4576ZQMTLW4.nile.trondisco.net
+17:58:26.824 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for GFA2RPWKTZ2A4BG4576ZQMTLW4.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:26.824 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending GFA2RPWKTZ2A4BG4576ZQMTLW4.nile.trondisco.net./TXT, id=34551 to udp/8.8.8.8:53
+17:58:27.469 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for GFA2RPWKTZ2A4BG4576ZQMTLW4.nile.trondisco.net./TXT
+17:58:27.470 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried GFA2RPWKTZ2A4BG4576ZQMTLW4.nile.trondisco.net./TXT, id=34551: SUCCESSFUL
+17:58:27.470 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 646ms, total cost: 646ms
+17:58:27.472 [Test worker] INFO net - LookUp name: 7O56JH6QHHC2VSC6ZJFKLX5BMU.nile.trondisco.net
+17:58:27.473 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 7O56JH6QHHC2VSC6ZJFKLX5BMU.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:27.473 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending 7O56JH6QHHC2VSC6ZJFKLX5BMU.nile.trondisco.net./TXT, id=14929 to udp/140.207.198.6:53
+17:58:28.135 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for 7O56JH6QHHC2VSC6ZJFKLX5BMU.nile.trondisco.net./TXT
+17:58:28.135 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried 7O56JH6QHHC2VSC6ZJFKLX5BMU.nile.trondisco.net./TXT, id=14929: SUCCESSFUL
+17:58:28.135 [Test worker] DEBUG net - Succeed to use dns: 140.207.198.6, cur cost: 663ms, total cost: 663ms
+17:58:28.136 [Test worker] INFO net - LookUp name: SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net
+17:58:28.136 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:28.136 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net./TXT, id=47251 to udp/117.50.11.11:53
+17:58:28.524 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net./TXT, id=47251 failed using resolver SimpleResolver [/117.50.11.11:53]
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.DatagramDispatcher.read(DatagramDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:296)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+	at java.base/sun.nio.ch.DatagramChannelImpl.read(DatagramChannelImpl.java:940)
+	at org.xbill.DNS.NioUdpClient$Transaction.processReadyKey(NioUdpClient.java:122)
+	at org.xbill.DNS.NioClient.processReadyKeys(NioClient.java:182)
+	at org.xbill.DNS.NioClient.runSelector(NioClient.java:134)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+17:58:28.525 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:28.526 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net./TXT, id=52714 to udp/117.50.11.11:53
+17:58:28.883 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net./TXT, id=52714 failed using resolver SimpleResolver [/117.50.11.11:53]
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.DatagramDispatcher.read(DatagramDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:296)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+	at java.base/sun.nio.ch.DatagramChannelImpl.read(DatagramChannelImpl.java:940)
+	at org.xbill.DNS.NioUdpClient$Transaction.processReadyKey(NioUdpClient.java:122)
+	at org.xbill.DNS.NioClient.processReadyKeys(NioClient.java:182)
+	at org.xbill.DNS.NioClient.runSelector(NioClient.java:134)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+17:58:28.884 [Test worker] DEBUG net - Failed to use dns: 117.50.11.11, cur cost: 748ms
+17:58:28.884 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:28.884 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net./TXT, id=11164 to udp/140.207.198.6:53
+17:58:29.477 [connPool] DEBUG net - Lack size:8, connectNodes size:0, is disconnect trigger: false
+17:58:29.618 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net./TXT
+17:58:29.619 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried SMP7NHQCSBYL6DMTZUAH5YXXIQ.nile.trondisco.net./TXT, id=11164: SUCCESSFUL
+17:58:29.619 [Test worker] DEBUG net - Succeed to use dns: 140.207.198.6, cur cost: 735ms, total cost: 1483ms
+17:58:29.623 [Test worker] INFO net - LookUp name: PQWFZHTCZIIJWIEUSY2VGA3U3U.nile.trondisco.net
+17:58:29.623 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for PQWFZHTCZIIJWIEUSY2VGA3U3U.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:29.624 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending PQWFZHTCZIIJWIEUSY2VGA3U3U.nile.trondisco.net./TXT, id=35331 to udp/114.114.115.115:53
+17:58:29.921 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for PQWFZHTCZIIJWIEUSY2VGA3U3U.nile.trondisco.net./TXT
+17:58:29.921 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried PQWFZHTCZIIJWIEUSY2VGA3U3U.nile.trondisco.net./TXT, id=35331: SUCCESSFUL
+17:58:29.921 [Test worker] DEBUG net - Succeed to use dns: 114.114.115.115, cur cost: 298ms, total cost: 298ms
+17:58:29.921 [Test worker] INFO net - LookUp name: XRJEDPGWN5JOAW6ZJBXSYZGDOY.nile.trondisco.net
+17:58:29.921 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for XRJEDPGWN5JOAW6ZJBXSYZGDOY.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:29.922 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending XRJEDPGWN5JOAW6ZJBXSYZGDOY.nile.trondisco.net./TXT, id=12668 to udp/223.6.6.6:53
+17:58:30.463 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for XRJEDPGWN5JOAW6ZJBXSYZGDOY.nile.trondisco.net./TXT
+17:58:30.463 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried XRJEDPGWN5JOAW6ZJBXSYZGDOY.nile.trondisco.net./TXT, id=12668: SUCCESSFUL
+17:58:30.463 [Test worker] DEBUG net - Succeed to use dns: 223.6.6.6, cur cost: 542ms, total cost: 542ms
+17:58:30.463 [Test worker] INFO net - LookUp name: AHCYPDOGUP6AXF4CXN6VTQSCWI.nile.trondisco.net
+17:58:30.463 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for AHCYPDOGUP6AXF4CXN6VTQSCWI.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:30.464 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending AHCYPDOGUP6AXF4CXN6VTQSCWI.nile.trondisco.net./TXT, id=40135 to udp/8.8.8.8:53
+17:58:30.662 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for AHCYPDOGUP6AXF4CXN6VTQSCWI.nile.trondisco.net./TXT
+17:58:30.662 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried AHCYPDOGUP6AXF4CXN6VTQSCWI.nile.trondisco.net./TXT, id=40135: SUCCESSFUL
+17:58:30.663 [Test worker] DEBUG net - Succeed to use dns: 8.8.8.8, cur cost: 200ms, total cost: 200ms
+17:58:30.663 [Test worker] INFO net - LookUp name: 2D2ZWABWF553HUNDO7MXAW2VMU.nile.trondisco.net
+17:58:30.663 [Test worker] DEBUG org.xbill.DNS.Lookup - Lookup for 2D2ZWABWF553HUNDO7MXAW2VMU.nile.trondisco.net./TXT, cache answer: UNKNOWN
+17:58:30.664 [Test worker] DEBUG org.xbill.DNS.SimpleResolver - Sending 2D2ZWABWF553HUNDO7MXAW2VMU.nile.trondisco.net./TXT, id=60326 to udp/9.9.9.9:53
+17:58:30.705 [Test worker] DEBUG org.xbill.DNS.Cache - Caching SUCCESSFUL for 2D2ZWABWF553HUNDO7MXAW2VMU.nile.trondisco.net./TXT
+17:58:30.705 [Test worker] DEBUG org.xbill.DNS.Lookup - Queried 2D2ZWABWF553HUNDO7MXAW2VMU.nile.trondisco.net./TXT, id=60326: SUCCESSFUL
+17:58:30.705 [Test worker] DEBUG net - Succeed to use dns: 9.9.9.9, cur cost: 42ms, total cost: 42ms
+17:58:30.709 [Test worker] INFO net - SyncTree tree://AKMQMNAJJBL73LXWPXDI4I5ZWWIZ4AWO34DWQ636QOBBXNFXH3LQS@nile.trondisco.net complete, LinkEntry size:0, NodesEntry size:73, node size:136
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
