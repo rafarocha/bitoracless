@@ -15,7 +15,9 @@ public enum MessageType {
 
   DISCONNECT((byte) 0xfb),
 
-  UNKNOWN((byte) 0x80);
+  UNKNOWN((byte) 0x80),
+
+  ETH_CHECK_STATE((byte)0x20), ETH_INBOUND_PUSH((byte)0x21), ETH_INBOUND_PULL((byte)0x22), ETH_OUTBOUND_PUSH((byte)0x23), ETH_OUTBOUND_PULL((byte)0x24);
 
   private final byte type;
 

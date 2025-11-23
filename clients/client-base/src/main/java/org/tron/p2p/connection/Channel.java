@@ -23,6 +23,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.tron.p2p.base.Parameter;
 import org.tron.p2p.connection.business.upgrade.UpgradeController;
 import org.tron.p2p.connection.message.Message;
+import org.tron.p2p.connection.message.chain.EthereumMessage;
 import org.tron.p2p.connection.message.handshake.HelloMessage;
 import org.tron.p2p.connection.socket.MessageHandler;
 import org.tron.p2p.connection.socket.P2pProtobufVarint32FrameDecoder;

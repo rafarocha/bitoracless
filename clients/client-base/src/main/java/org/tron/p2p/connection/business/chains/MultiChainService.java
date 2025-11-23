@@ -7,42 +7,61 @@ import java.util.List;
 
 public class MultiChainService {
 
-    public static final String URL = "https://mainnet.infura.io/v3/YOUR_KEY";
+    public static final String ETH_NODE_URL = "https://sepolia.infura.io/ws/v3/YOUR_KEY";
+
+    private final EthereumService ethereumService;
+    private final SolanaService solanaService;
     private final LayerZeroService layerZeroService;
 
     public MultiChainService() {
-        this.layerZeroService = new LayerZeroService();
+        this.ethereumService = ethService;
+        this.solanaService = solService;
+        this.layerZeroService = lzService;
+        System.out.println("MultiChain");
     }
 
     public void settleData(String targetChain, String contractAddress, byte[] finalOracleData) {
-        System.out.println("\n🌐 HUB: Recebendo dado final. Liquidando em: " + targetChain);
+        System.out.println("Recebendo " + targetChain.toUpperCase());
 
-        switch (targetChain.toLowerCase()) {
-            case "ethereum":
+        try {
+            switch (targetChain.toLowerCase()) {
 
-                break;
-            case "solana":
+                case "ethereum":
+                    ethereumService.settleData(contractAddress, finalOracleData);
+                    break;
 
-                break;
-            case "cross_chain":
+                case "solana":
+                    solanaService.settleData(contractAddress, finalOracleData);
+                    break;
 
-                break;
-            default:
-                System.err.println("Chain de destino desconhecida.");
+                case "cross_chain":
+                case "layerzero_to_solana":
+                    layerZeroService.getClass(
+                            LayerZeroService.SOLANA_LZ_ID,
+                            contractAddress,
+                            finalOracleData
+                    );
+                    break;
+
+                default:
+                    System.err.println("error " + targetChain);
+            }
+        } catch (Exception e) {
+            // TODO implementar fallback
+            System.err.println("Erro chain " + targetChain + ": " + e.getMessage());
         }
     }
 
     public void startNodeWithEnsDiscovery() {
         EnsDiscoveryService ensService = new EnsDiscoveryService(URL);
 
-        // Exemplo: Resolve 'discovery.torrent-oracle.eth' que tem 3 registros TXT
         List<String> urlsFromEns = ensService.resolveAllTxtRecords("discovery.torrent-oracle.eth");
 
         if (urlsFromEns != null && !urlsFromEns.isEmpty()) {
             P2pConfig config = new P2pConfig();
             config.setDiscoveryUrls(urlsFromEns);
             config.setDiscoverEnable(true);
-            System.out.println("P2P iniciado com " + urlsFromEns.size() + " URLs de Descoberta via ENS.");
+            System.out.println("P2P iniciado com " + urlsFromEns.size() + " URLs Descoberta via ENS.");
         }
     }
 
